@@ -1,0 +1,19 @@
+.box {
+  width:700px;
+  height: 200px;
+}
+
+/* Color name */
+.color_name {
+  background-color: cyan;
+}
+
+/* Color RGB */
+.color_rgb {
+  background-color: rgb(125, 55, 201);
+}
+
+/* Color HexaDecimal */
+.color_hexa {
+  background-color: #559922;
+}
