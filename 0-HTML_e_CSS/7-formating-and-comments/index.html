@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formating and comments</title>
+</head>
+<body>
+  <h1>Formatando Textos</h1>
+
+  <p>A formatação de textos pode ser muito feita com o próprio CSS, mas o problema nisso, é que o "CSS" não tem o poder de deixar partes do texto com a devida "importância" que ele precisa para ser apresentado aos motores de busca.<br>
+    O CSS vai cuidar da estilização em si, mas apenas isso, a parte de importância e destaque aos motores de busca e leitores de tela é o próprio HTML quem vai cuidar, então temos algumas tags importantes que fazem essa formatação e ainda dão essa importância necessaria:
+  </p>
+
+  <ul>
+    <li>&lt;strong&gt; : Utilizada para deixar o texto em negrito e com mais "importância" para leitores de tela e motores de busca.
+    </li>
+    <li>&lt;em&gt; : Tag que vai deixar o conteúdo em itálico, feita para dar uma "enfase" a mais para o texto.</li>
+    <li>&lt;small&gt; : Tag utilizada para dar "menos importância" ao conteúdo que está dentro dela, é basicamente um reverso do strong.</li>
+    <li>&lt;mark&gt; : Tag utilizada como um "marca-texto" vai marcar o conteúdo com um fundo colorido e vai já deixar com uma importância tanto visual quanto para leitores de tela</li>
+    <li>&lt;del&gt; : Utilizada para "deletar" um elemento do texto, não vai fazer a remoção em si, mas vai dizer tipo "ignore essa parte"</li>
+  </ul>
+
+  <!-- Área de exemplo -->
+
+  <p>Exemplo:<br>
+    As principais linguagens de programação para algumas áreas da programação hoje em dia:<br><br>
+    Front-end: <strong>Javascript</strong>, <mark>principal linguagem do front-end</mark> utilizada também em outras <em>áreas</em><br><br>
+    Mobile: <strong>Kotlin, Swift, Dart, JavaScript</strong>, sendo 2 linguagens para <em>desenvolvimento nativo</em> e outras 2 para <em>desenvolvimento cross-platform</em> respectivamente.<br><br>
+    Existem <mark>muitas outras áreas na programação</mark>, é claro que devemos escolher <strong>apenas uma</strong> para iniciar pois, querer fazer várias áreas ao mesmo tempo, só vai <em>tirar o seu foco</em> e não vai ajudar muito.  
+  </p>
+  <p><small>Para mais informações siga <del><a>Tudo sobre programação</a></del> <a href="#">Vivendo a programação</a></small></p>
+
+  <br><br>
+
+  <p>Bonus: Comentários são utilizados no HTML e na programação em geral para comentar uma certa parte do código, ignorar código e até deixar avisos no código para não se perder durante a manutenção ou para outros programadores entenderem melhor o seu código quando forem editar ele. No HTML Representado por: &lt;!-- --&gt; e tudo que estiver entre isso será ignorado, e só poderá ser lido apenas pelo editor de código ou inspecionar ou código fonte da página.</p>
+</body>
+</html>
