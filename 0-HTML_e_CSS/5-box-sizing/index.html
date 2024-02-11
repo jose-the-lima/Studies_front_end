@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box-sizing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Box-sizing</h1>
+
+  <p>Basicamente o box-sizing, vai definir o tamanho que a caixa vai seguir, se vai ser o tamanho real definido por você, ou se vai ser um tamanho relativo a todos as própriedades adicionadas, temos 2 valores importantes:</p>
+
+  <ul>
+    <li>
+      content-box
+      <p>Vai somar o tamanho do conteúdo que você definiu + borda + padding.</p>
+    </li>
+    <li>
+      border-box
+      <p>Vai subtrair do tamanho que você definiu o valor da: borda e padding. Para que o tamanho final continue sendo o valor definido desde o inicio.</p>
+    </li>
+  </ul>
+
+  <h2>Content-box (Caixa definida com 300px de width e height) Com padding e borda</h2>
+
+  <div class="box-1">TEXTO DENTRO DA CAIXA</div>
+
+  <h2>border-box (Caixa definida com 300px de width e height) Com padding e borda</h2>
+
+  <div class="box-2">TEXTO DENTRO DA CAIXA</div>
+
+  <p>Com o box-sizing você vai conseguir fazer com que os seus elementos tenham exatamente o valor que você definiu, sem se preocupar em que eles cresçam mais do que o limite.</p>
+
+  <div class="four-images">
+    <img src="https://feemdeus.com.br/wp-content/uploads/2021/03/Jesus-e-o-Consolador-1.jpg" alt="Jesus consolando uma pessoa">
+    <img src="https://decisaosistemas.com.br/wp-content/uploads/2021/06/tecnologia-na-gestao-das-empresas.jpg" alt="Tecnologias em geral">
+    <img src="https://cdn.maioresemelhores.com/imagens/doramas-romanticos-og.jpg" alt="">
+    <img src="https://cdn.folhape.com.br/img/pc/1100/1/dn_arquivo/2022/12/33662yq-preview-1.jpg" alt="">
+  </div>
+</body>
+</html>

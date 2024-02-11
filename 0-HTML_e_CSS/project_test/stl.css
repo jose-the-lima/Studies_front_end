@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #dddddd;
   margin: 0px;
@@ -6,19 +10,17 @@ body {
 #title {
   color: #ffffff;
   background-color: #555555;
-  border: 2px solid #ff0000;
+  border-bottom: 2px solid #ff0000;
   margin: 0px 0px 1rem;
   padding: 10px 25px;
 }
 
 .f-text {
-  color: blue;
   font-size: 22px;
   padding-left: 1rem;
 }
 
 .list-title {
-  color: #555555;
   font-size: 28px;
   padding-left: 1rem;
 }
@@ -32,16 +34,19 @@ body {
 .main-list .main-item {
   background-color: lightseagreen;
   margin-bottom: 1.5rem;
+  padding: 0px 0px 1rem;
 }
 
 .main-list .main-item h3 {
   margin: 0px 0px 1rem;
   padding: 15px;
+  font-size: 30px;
 }
 
 .main-list img {
   border: 2px solid red;
-  margin-left: 1rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 .main-list h4 {

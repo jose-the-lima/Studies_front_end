@@ -1,0 +1,30 @@
+.box-1 {
+  box-sizing: content-box;
+  background-color: purple;
+  width: 300px;
+  height: 300px;
+  padding: 40px;
+  border: 2px solid red;
+}
+
+.box-2 {
+  box-sizing: border-box;
+  background-color: purple;
+  width: 300px;
+  height: 300px;
+  padding: 40px;
+  border: 2px solid red;
+}
+
+.four-images {
+  box-sizing: border-box;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000000;
+}
+
+.four-images img {
+  width: 49.5%;
+  height: 49.5%;
+  object-fit: cover;
+}
