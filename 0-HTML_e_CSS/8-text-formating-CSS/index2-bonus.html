@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>External Font</title>
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+    body {
+      background-image: url("https://huggingface.co/sd-dreambooth-library/digimon-adventure-anime-background-style/resolve/main/concept_images/4.jpeg");
+      background-size: 100% 600px;
+    }
+
+    .header {
+      background-color: #1144ff;
+      color: #ffffff;
+      text-align: center;
+      font-family: 'Honk';
+    }
+    .header img {
+      height: 75px;
+    }
+
+    .title-section {
+      background-color: yellow;
+      padding: 1rem 15px;
+      font-family: 'Honk';
+      font-size: 28px;
+    }
+
+    .digimons-list {
+      padding-left: 40px;
+      list-style: none;
+      margin-bottom: 2rem;
+      background-color: #3377ff;
+    }
+
+    .digimons-list li {
+      margin-bottom: 1rem;
+      font-size: 22px;
+      font-family: 'Honk';
+    }
+    .digimons-list li:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .digimon {
+      border: 1px solid #1144ff;
+      padding: 20px;
+      margin: 2rem 0px;
+      background-color: #3377ff;
+    }
+    .digimon-name {
+      font-size: 30px;
+      font-family: 'Honk';
+      text-align: center;
+    }
+    .digimon-images {
+      text-align: center;
+      margin: 1rem 0px;
+    }
+    .digimon-images img {
+      width: 40%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .digimon-info {
+      font-size: 24px;
+      font-family: 'Protest Guerrilla';
+      text-align: justify;
+    }
+
+    .footer {
+      height: 80px;
+      background-color:#1144ff;
+      font-size: 25px;
+      font-family: 'Honk';
+      text-align: center;
+      line-height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Wikimon</h1>
+    <img src="digimon.png" alt="Digimon">
+  </div>
+
+  <h2 class="title-section">Digimons da semana:</h2>
+  <ul class="digimons-list">
+    <li><a href="#agumon">Agumon</a></li>
+    <li><a href="#gabumon">Gabumon</a></li>
+    <li><a href="#andromon">Andromon</a></li>
+    <li><a href="#patamon">Patamon</a></li>
+  </ul>
+
+  <div class="digimons">
+    <div class="digimon" id="agumon">
+      <p class="digimon-name">Agumon</p>
+      <div class="digimon-images">
+        <img src="https://i.pinimg.com/originals/8f/25/4b/8f254b2ccff50020269d2b15d766d88b.jpg" alt="">
+        <img src="https://sm.ign.com/t/ign_br/screenshot/default/digimon-agumon_smey.1200.jpg" alt="">
+      </div>
+      <p class="digimon-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque doloribus non delectus, ipsum ab esse ex qui facilis voluptates dicta culpa beatae impedit totam quia, reiciendis necessitatibus, tempora error autem libero similique odio. Ad ex labore impedit eveniet, quo quidem.</p>
+    </div>
+
+    <div class="digimon" id="gabumon">
+      <p class="digimon-name">Gabumon</p>
+      <div class="digimon-images">
+        <img src="https://pm1.aminoapps.com/7949/a00e3170f43cf8d664968811e4d26a62bc9ab1f7r1-1920-1080v2_hq.jpg" alt="">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea914385-70d7-476d-aa3b-37d0c449c464/deihviq-50fe23f1-8a91-424e-ae1b-a62da2d0619f.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VhOTE0Mzg1LTcwZDctNDc2ZC1hYTNiLTM3ZDBjNDQ5YzQ2NFwvZGVpaHZpcS01MGZlMjNmMS04YTkxLTQyNGUtYWUxYi1hNjJkYTJkMDYxOWYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7QMTGbBsYgC6_4GcIomQA0UDlz87BsY61l1a1LCNQ78" alt="">
+      </div>
+      <p class="digimon-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque doloribus non delectus, ipsum ab esse ex qui facilis voluptates dicta culpa beatae impedit totam quia, reiciendis necessitatibus, tempora error autem libero similique odio. Ad ex labore impedit eveniet, quo quidem.</p>
+    </div>
+
+    <div class="digimon" id="andromon">
+      <p class="digimon-name">Andromon</p>
+      <div class="digimon-images">
+        <img src="https://static.wikia.nocookie.net/digimon-adventure5140/images/8/80/Andromon_%28Reboot_Ep._12%29.png/revision/latest?cb=20220701053918" alt="">
+        <img src="https://64.media.tumblr.com/de14242adbe7cf35af25baaccbf91a0a/9aa79b219f44d7cc-ce/s640x960/acaf840195d24ebc26a43dc3bd895dcd17845a24.png" alt="">
+      </div>
+      <p class="digimon-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque doloribus non delectus, ipsum ab esse ex qui facilis voluptates dicta culpa beatae impedit totam quia, reiciendis necessitatibus, tempora error autem libero similique odio. Ad ex labore impedit eveniet, quo quidem.</p>
+    </div>
+
+    <div class="digimon" id="patamon">
+      <p class="digimon-name">Patamon</p>
+      <div class="digimon-images">
+        <img src="https://static.wikia.nocookie.net/digimonadventure6597/images/8/8f/Patamon01.png/revision/latest?cb=20201005164643" alt="">
+        <img src="https://wikimon.net/images/thumb/6/6a/Takeru_patamon_2020_anime.png/300px-Takeru_patamon_2020_anime.png" alt="">
+      </div>
+      <p class="digimon-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque doloribus non delectus, ipsum ab esse ex qui facilis voluptates dicta culpa beatae impedit totam quia, reiciendis necessitatibus, tempora error autem libero similique odio. Ad ex labore impedit eveniet, quo quidem.</p>
+    </div>
+  </div>
+
+  <div class="footer">E por hoje é só pessoal, não se esqueça de cuidar de seu Digi amigo.</div>
+</body>
+</html>

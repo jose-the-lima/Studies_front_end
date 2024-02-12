@@ -1,0 +1,27 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  padding: 0px 10px;
+}
+h1 {
+  background-color: crimson;
+  margin-bottom: 1rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+
+.small-info {
+  background-color: gray;
+  text-align: center;
+  padding: 1rem;
+}
+
+.bonus {
+  background-color: yellow;
+  border: 2px dashed blue;
+  padding: 5px;
+}

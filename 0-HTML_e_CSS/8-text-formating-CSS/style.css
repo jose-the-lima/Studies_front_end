@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+}
+h1 {
+  font-family: verdana;
+  color: white;
+}
+
+p {
+  font-size:20px;
+  font-family: Arial;
+  font-weight: 100;
+  color: orangered;
+  word-spacing: 5px;
+  text-shadow: 1px 2px 2px #000000;
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+p:hover {
+  text-decoration: underline;
+}
