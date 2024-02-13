@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>
+      FilmesFLIX
+      <img src="https://cdn-icons-png.flaticon.com/512/5507/5507847.png" alt="logo-site">
+    </h1>
+  </div>
+
+  <div class="signup">
+    <h2>Cadastre-se já e aproveite os melhores filmes do momento!!</h2>
+
+    <form action="pages/login.html" method="GET">
+      <input type="hidden" name="country" value="BR">
+      <!-- 
+        Other types of input -> date, datetime-local, month, week, number, tel, url, search,
+        color, range
+       -->
+      
+
+       <!-- Fieldset e legend: 
+        Fieldset: Define um grupo mais organizado para determinados inputs daquele assunto 
+        legend: Define o título visual para aquele grupo de inputs em si.
+      -->
+      <fieldset name="">
+        <legend>Dados pessoais</legend>
+        <label>
+          Nome completo:<br>
+          <input type="text" name="name" placeholder="Nome completo" required>
+        </label>
+  
+        <label>
+          Data de nascimento:<br>
+          <input type="date" name="birthday" required>
+        </label>
+  
+        <label>
+          Idade:<br>
+          <input type="range" min="5" max="105" name="age" required>
+        </label>
+  
+        <div class="sex">
+          <p>Sexo:<p>
+          <label>
+            Masculino
+            <input type="radio" name="sex" checked>
+          </label>
+          <label>
+            Feminino
+            <input type="radio" name="sex">
+          </label>
+        </div>
+  
+        <label>
+          Telefone/Celular:<br>
+          <input type="tel" name="phone_number" placeholder="## 9####-####">
+        </label>
+  
+        <label>
+          Email:<br>
+          <input type="email" name="email" placeholder="example@exemple.com" required>
+        </label>
+      </fieldset>
+      <!-- Personal data -->
+      
+
+      <!-- Preferences -->
+      <fieldset name="preferences">
+        <legend>Preferências</legend>
+
+        <label>
+          Foto do perfil:<br>
+          <input type="file" name="photo" accept=".jpg, .png">
+        </label>
+
+        <label>
+          Usuário:<br>
+          <input type="text" name="user" placeholder="Usuário" required>
+        </label>
+  
+        <label>
+          Senha:<br>
+          <input type="password" name="password" minlength="8" placeholder="Senha" required>
+        </label>
+
+        <label>
+          Repita a senha:<br>
+          <input type="password" name="r_password" minlength="8" placeholder="Repita a senha">
+        </label>
+        <!-- Select: É um campo que possuí, várias opções para você selecionar, 1 ou mais(caso você esteja utilizando o atributo booleano "multiple"), serve para selecionar uma opção específica dentre outras escolhas já pré-definidas -->
+  
+        <label>
+          Genêro de filme favorito:<br>
+          <select name="favorite">
+            <option value="nothing">Nenhum</option>
+            <option value="comedy">Comedia</option>
+            <option value="action">Ação</option>
+            <option value="fiction">Ficção</option>
+            <option value="adventure">Aventura</option>
+            <option value="romance">Romance</option>
+            <option value="fight">Luta</option>
+            <option value="horror">Terror</option>
+          </select>
+        </label>
+        
+        <label>
+          Gênero de filme menos favorito:<br>
+          <select name="hated">
+            <option value="nothing">Nenhum</option>
+            <option value="comedy">Comedia</option>
+            <option value="action">Ação</option>
+            <option value="fiction">Ficção</option>
+            <option value="adventure">Aventura</option>
+            <option value="romance">Romance</option>
+            <option value="fight">Luta</option>
+            <option value="horror">Terror</option>
+          </select>
+        </label>
+        
+        <!-- Textarea campo de formulário, que se resume a um "input" bem maior que consegue receber mais dados, quebras de linha e você consegue ver tudo visualmente sem muita dificuldade -->
+        <label>
+          Descrição para o seu perfil(Opcional):<br>
+          <textarea name="profile-description"></textarea>
+        </label>
+      </fieldset>
+      
+      <label>
+        <input type="checkbox" name="terms" required>
+        Li e concordo com os termos de uso.
+      </label>
+      <input id="submit" type="submit" value="realizar cadastro">
+    </form>
+  </div>
+</body>
+</html>

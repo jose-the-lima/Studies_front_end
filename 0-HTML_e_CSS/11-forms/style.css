@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #cc8800;
+  color: #020e5f;
+  padding: 1rem;
+}
+.header h1 img {
+  height: 40px;
+}
+h1 {
+  text-align: center;
+}
+
+.signup {
+  padding: 1.5rem 2rem;
+  background-color:#020e5f;
+  color:#cc8800;
+}
+
+form {
+  padding-top: 1rem;
+}
+
+.signup h2{
+  font-size: 30px;
+}
+
+label, .sex {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+.sex label {
+  display: inline;
+}
+.sex p {
+  margin-bottom: .5rem;
+}
+input:not(.sex input, input[type="checkbox"]), select, textarea {
+  margin: 7px 0px;
+  width: 650px;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 2px solid #cc8800;
+  border-radius: 5px;
+  color: #cc8800;
+}
+#submit {
+  font-size: 28px;
+  padding: 10px 25px;
+  transition: .5s all ease;
+}
+#submit:hover {
+  background-color:#020e5f;
+  color:#cc8800;
+  cursor: pointer;
+}
+
+textarea {
+  height: 150px;
+  resize:none;
+}
+
+fieldset {
+  border:1px solid #cc8800;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+fieldset legend {
+  font-size: 20px;
+  padding: 10px;
+}
