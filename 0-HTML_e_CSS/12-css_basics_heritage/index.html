@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Base - Herança</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Quem estiver dentro de uma div, bloco, ou body que seja, e não tiver a sua propriedade já específicada para ele, vai receber a herança ou seja. E geralmente essa herança que pode ser "recebida" livremente são heranças relacionadas a fonte, nunca relacionada a bloco como: padding, margin, border... -->
+  <h1>Herança</h1>
+
+  <h2>Específicando tudo na mão:</h2>
+  <p>Azul, Vermelho, laranja</p>
+  <div class="especific">
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, odit.</p>
+
+    <ul>
+      <li>
+        abcdabcd
+      </li>
+      <li>
+        abcdabcd
+      </li>
+      <li>
+        abcdabcd
+      </li>
+      <li>
+        abcdabcd
+      </li>
+      <li>
+        abcdabcd
+      </li>
+    </ul>
+  </div>
+
+  <h2>Especificando na div como um todo</h2>
+  <p>Verde escuro</p>
+  <div class="inherit">
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, odit.</p>
+
+    <ul>
+      <li>
+        abcdabcd
+      </li>
+      <li>
+        abcdabcd
+      </li>
+      <li>
+        abcdabcd
+      </li>
+      <li>
+        abcdabcd
+      </li>
+      <li>
+        abcdabcd
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

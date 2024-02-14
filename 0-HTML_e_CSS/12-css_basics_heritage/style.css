@@ -1,0 +1,18 @@
+.especific, .inherit {
+  border: 1px solid #000000;
+  padding: 10px;
+}
+.especific p {
+  color: red;
+}
+.especific p:nth-child(1) {
+  color: blue;
+}
+
+.especific ul {
+  color: orangered;
+}
+
+.inherit {
+  color: darkgreen;
+}

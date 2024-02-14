@@ -1,29 +1,67 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #dddddd;
   margin: 0px;
 }
-
-#title {
-  color: #ffffff;
-  background-color: #555555;
-  border-bottom: 2px solid #ff0000;
-  margin: 0px 0px 1rem;
-  padding: 10px 25px;
+/* Cabeçalho */
+.header {
+  height: 80px;
+  background-color: #bbbbbb;
+  font-family: arial;
+}
+.header h1 {
+  line-height: 70px;
+  text-align: center;
+}
+.header img{
+  width: 40px;
+  vertical-align: middle;
 }
 
+
+/* Pós-cabeçalho */
+.f-text, 
+.list-title, 
+.main-list .main-item h3, 
+.country-info, 
+.main-list h4, 
+.main-list ul,
+.footer,
+.curiosities,
+.countries-list {
+  font-family: 'Josefin sans';
+}
 .f-text {
-  font-size: 22px;
+  font-size: 24px;
   padding-left: 1rem;
+  margin: 1rem 0px;
+}
+
+.countries-list-area {
+  padding: 1rem;
+  background-color: lightseagreen;
 }
 
 .list-title {
   font-size: 28px;
-  padding-left: 1rem;
 }
+.countries-list {
+  list-style-type: none;
+  padding-left: 2rem;
+  margin-top: .5rem;
+  font-size: 21px;
+}
+.countries-list li {margin-bottom: .5rem;}
+.countries-list li a{
+  color: #000000;
+  text-decoration: none;
+}
+.countries-list li a:hover{text-decoration: underline;}
 
 .main-list {
   list-style-type: none;
@@ -31,37 +69,54 @@ body {
   margin: 0px;
 }
 
+.main-list .main-item:first-child {
+  margin-top: 1.5rem;
+}
 .main-list .main-item {
   background-color: lightseagreen;
   margin-bottom: 1.5rem;
   padding: 0px 0px 1rem;
+  text-align: center;
 }
 
 .main-list .main-item h3 {
+  text-align: center;
+  background-color: #bbbbbb;
   margin: 0px 0px 1rem;
   padding: 15px;
   font-size: 30px;
+  border-top: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+  text-shadow: 1px 1px 3px #000000;
 }
 
 .main-list img {
-  border: 2px solid red;
   width: 100%;
   max-width: 600px;
+  margin: 1rem 0px;
+}
+
+.main-list .country-info {
+  font-size: 20px;
+  padding: 0 5rem 1rem;
+  text-align: justify;
 }
 
 .main-list h4 {
-  margin-left: 1rem;
+  font-size: 24px;
+  color:#333333;
+  margin: 0px 0px 1rem 1rem;
 }
 
 .main-list ul li {
+  margin-bottom: 10px;
   color: white;
   font-size: 20px;
   font-weight: bold;
+  text-shadow: 1px 1px 3px #000000;
 }
 
-h3 {
-  background-color: #000000;
-}
+
 
 .fin {color: cyan;}
 .noru {color: red;}
@@ -70,8 +125,58 @@ h3 {
 .white {color: white;}
 .blue {color: blue;}
 
+
+
+
+/* Curiosities area */
+
+.curiosities {
+  background-color: lightseagreen;
+  margin: 1rem 0 1.5rem;
+  padding: 0px 0px 1rem;
+}
+
+.curiosities h2 {
+  background-color:#bbbbbb;
+  padding: 1rem;
+  border-top: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+  text-align: center;
+}
+
+table {
+  margin: 1rem auto 1rem;
+  border: 1px solid #000000;
+}
+table th {
+  background-color:#888888;
+}
+table th, table td {
+  border: 1px solid #000000;
+  padding: 10px;
+}
+tbody tr:nth-child(even) {
+  background-color: #ababab;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+tbody tr:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+
 .footer {
+  text-align: center;
   margin: 0px;
-  padding: 15px 10px;
+  padding: 20px;
   background-color: gray;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer a:hover {
+  text-decoration: underline;
 }

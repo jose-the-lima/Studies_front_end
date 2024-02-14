@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS basic Especificity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>"Quanto mais específico melhor"</h1>
+
+  <p>Basicamente quanto mais específico, mais o elemento será estilizado de maneira correta.</p>
+
+  <h2>Força da específicidade</h2>
+  <ul>
+    <li>
+      !important<br><span class="pont">10000</span>
+    </li>
+    <li>
+      CSS-inline<br><span class="pont">1000</span>
+    </li>
+    <li>
+      ID<br><span class="pont">100</span>
+    </li>
+    <li>
+      Class<br><span class="pont">10</span>
+    </li>
+    <li>
+      Tag name<br><span class="pont">1</span>
+    </li>
+  </ul>
+
+  <br>
+  <strong>Esse P abaixo tem classe, id, css-inline, mas a cor que vai ser definida vai ser a cor: Azul, via !important</strong><br>
+  <p class="p" id="p" style="color: purple">Hi i'm a paraghaph</p>
+</body>
+</html>

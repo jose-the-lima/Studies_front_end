@@ -1,0 +1,18 @@
+* {
+  font-family: arial;
+}
+
+.pont {
+  font-size: 54px;
+  color: green;
+}
+
+.p {
+  color: red;
+}
+#p {
+  color: orangered;
+}
+p {
+  color: blue !important;
+}

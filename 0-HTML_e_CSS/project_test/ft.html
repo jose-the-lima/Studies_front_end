@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snowing infos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stl.css">
   </head>
   <body>
-    <h1 id="title">Nevando informações</h1>
+    <div class="header">
+      <h1 id="title">
+        Nevando informações
+        <img src="https://static.vecteezy.com/system/resources/previews/017/059/170/non_2x/snowflake-icon-free-png.png" alt="novelo de lã(Logo do site)">
+      </h1>
+    </div>
 
     <hr/>
 
@@ -15,44 +21,69 @@
       E alguns desses países são:
     </p>
 
-    <h2 class="list-title">Alguns dos países que nevam:</h2>
+    <div class="countries-list-area">
+      <h2 class="list-title">Alguns dos países que nevam:</h2>
 
+      <ul class="countries-list">
+        <li>
+          <a href="#noruega">Noruega</a>
+        </li>
+        <li>
+          <a href="#canada">Canadá</a>
+        </li>
+        <li>
+          <a href="#eua">Estados unidos</a>
+        </li>
+        <li>
+          <a href="#finlandia">Finlândia</a>
+        </li>
+      </ul>
+    </div>
+    
     <ul class="main-list">
-      <li class="main-item">
+      <li class="main-item" id="noruega">
         <h3 class="noru">Noruega</h3>
         <img src="https://vocenaneve.com.br/wp-content/uploads/2022/09/aurora-boreal-na-noruega.jpg" alt="Foto da noruega nevando">
 
-        <h4>Algumas cidades:</h4>
+        <p class="country-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident dolore cupiditate. Recusandae nobis quasi repudiandae magnam nihil obcaecati reiciendis, voluptas aperiam, iusto ipsam at ipsum quis aspernatur eligendi nemo, commodi cupiditate accusantium corporis sit.</p>
+
+        <h4>Algumas cidades da noruega:</h4>
         <ul>
           <li>Oslo</li>
           <li>TrondHeim</li>
         </ul>
       </li>
-      <li class="main-item">
+      <li class="main-item" id="canada">
         <h3><span class="white">Can</span><span class="red">adá</span></h3>
         <img src="https://neve-api.neve.com.br/wp-content/uploads/2014/06/Ruas-de-Whistler-Village.jpg" alt="Foto do canadá nevando">
 
-        <h4>Algumas cidades:</h4>
+        <p class="country-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident dolore cupiditate. Recusandae nobis quasi repudiandae magnam nihil obcaecati reiciendis, voluptas aperiam, iusto ipsam at ipsum quis aspernatur eligendi nemo, commodi cupiditate accusantium corporis sit.</p>
+
+        <h4>Algumas cidades do canadá:</h4>
         <ul>
           <li>Vancouver</li>
           <li>Toronto</li>
         </ul>
       </li>
-      <li class="main-item">
+      <li class="main-item" id="eua">
         <h3><span class="blue">Esta</span><span class="white">dos un</span><span class="red">idos</span></h3>
         <img src="https://jpimg.com.br/uploads/2021/02/neve-estados-unidos.jpg" alt="Foto dos estados unidos nevando">
 
-        <h4>Algumas cidades:</h4>
+        <p class="country-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident dolore cupiditate. Recusandae nobis quasi repudiandae magnam nihil obcaecati reiciendis, voluptas aperiam, iusto ipsam at ipsum quis aspernatur eligendi nemo, commodi cupiditate accusantium corporis sit.</p>
+
+        <h4>Algumas cidades dos Estados unidos:</h4>
         <ul>
           <li>New york</li>
           <li>San diego</li>
         </ul>
       </li>
-      <li class="main-item">
+      <li class="main-item" id="finlandia">
         <h3 class="fin">Finlândia</h3>
         <img src="https://i0.wp.com/brasilnaneve.cbdn.org.br/wp-content/uploads/sites/2/2022/12/ethan-hu-MRX-unYU1dc-unsplash.jpg" alt="Foto da finlândia nevando">
 
-        <h4>Algumas cidades:</h4>
+        <p class="country-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident dolore cupiditate. Recusandae nobis quasi repudiandae magnam nihil obcaecati reiciendis, voluptas aperiam, iusto ipsam at ipsum quis aspernatur eligendi nemo, commodi cupiditate accusantium corporis sit.</p>
+
+        <h4>Algumas cidades da finlândia:</h4>
         <ul>
           <li>Helsinki</li>
           <li>Turku</li>
@@ -60,7 +91,52 @@
       </li>
     </ul>
 
-    <p class="footer">Verifique cada um desses países no google, clicando <a href="https://www.google.com.br" target="_blank">aqui</a>
-    </p>
+    <div class="curiosities">
+      <h2>Curiosidades dos países acima que nevam:</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>País</th>
+            <th>População</th>
+            <th>Linguagem</th>
+            <th>Capital</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Noruega</td>
+            <td>5.408Mi</td>
+            <td>Norueguês</td>
+            <td>Oslo</td>
+          </tr>
+          <tr>
+            <td>Canadá</td>
+            <td>38.25Mi</td>
+            <td>Inglês e Francês</td>
+            <td>Ottawa</td>
+          </tr>
+          <tr>
+            <td>Estados unidos</td>
+            <td>331.9Mi</td>
+            <td>Inglês</td>
+            <td>Washington</td>
+          </tr>
+          <tr>
+            <td>Finlândia</td>
+            <td>5.541Mi</td>
+            <td>Finlândes e Sueco</td>
+            <td>Helsinki</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="footer">
+      <p>Verifique cada um desses países no google, clicando <a href="https://www.google.com.br" target="_blank">aqui</a>
+      </p>
+    </div>
+    
   </body>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="font-size: 25px;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="set-font-size">
+    <div class="actual-value"></div>
+    <div class="buttons">
+
+      <button class="up">
+        <img src="https://clipart-library.com/images/qTBoqqMBc.png" alt="">
+      </button>
+      <button class="down">
+        <img src="https://clipart-library.com/images/qTBoqqMBc.png" alt="">
+      </button>
+    </div>
+  </div>
+  <div class="header">
+    <h1>Exemplos MIX</h1>
+  </div>
+
+  
+  <div class="banner"></div>
+
+  <div class="all">
+    <h2>Lorem IPSUM</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ab quis optio laboriosam a, laborum atque in repellat repellendus ullam distinctio officia, iste, fugiat ipsam! Architecto hic praesentium sapiente recusandae!</p>
+
+    <h2>Lorem IPSUM</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ab quis optio laboriosam a, laborum atque in repellat repellendus ullam distinctio officia, iste, fugiat ipsam! Architecto hic praesentium sapiente recusandae!</p>
+
+    <h2>Lorem IPSUM</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ab quis optio laboriosam a, laborum atque in repellat repellendus ullam distinctio officia, iste, fugiat ipsam! Architecto hic praesentium sapiente recusandae!</p>
+
+    <div class="box">
+      <img src="https://miro.medium.com/v2/resize:fit:1080/1*HAjb-gFJXfqz1DE_hE3PHQ.jpeg" alt="">
+      <img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/036a58f3e5aee97736fbf16c05151f4d.jpe" alt="">
+    </div>
+
+    <h2>FINAL Paragraph</h2>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </div>
+  
+
+  <script>
+    
+    const htmlEle = document.querySelector("html");
+    refreshValue();
+
+    const upBt = document.querySelector(".up");
+    const downBt = document.querySelector(".down");
+
+    upBt.addEventListener("click", () => {
+      let actualValue = Number(htmlEle.style.fontSize.split("px")[0]) + 1;
+      htmlEle.style.fontSize = `${actualValue}px`
+      refreshValue();
+    });
+    downBt.addEventListener("click", () => {
+      let actualValue = Number(htmlEle.style.fontSize.split("px")[0]) - 1;
+      htmlEle.style.fontSize = `${actualValue}px`
+      refreshValue();
+    });
+
+    function refreshValue() {
+      const aValue = document.querySelector(".actual-value");
+      aValue.innerHTML = htmlEle.style.fontSize;
+    }
+  </script>
+</body>
+</html>
