@@ -1,0 +1,94 @@
+:root {
+  --bg-color-main: #3366ff;
+  --bg-color-topics-title: #33bb55;
+  --bg-topics: #dddd00;
+  --font-one: #222222;
+  --font-two: #444444;
+
+  --padding-header: 1.5rem 1rem;
+
+  --width-standard: 800px;
+  --height-standard: 400px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  background-color: var(--bg-color-main);
+  padding: var(--padding-header);
+  color: var(--font-one);
+}
+
+ul {
+  list-style: none;
+  font-size: 1.1rem;
+  color: var(--font-one);
+  font-weight: bold;
+  padding: 1rem;
+  background-color: var(--bg-topics);
+}
+ul li {
+  margin-bottom: .5rem;
+}
+
+h2, h3 {
+  background-color: var(--bg-color-topics-title);
+  padding: .5rem 10px;
+  text-align: center;
+  color: var(--font-one);
+}
+
+.tech {
+  background-color: var(--bg-topics);
+  text-align: center;
+}
+p {
+  padding: 0 1rem 1rem;
+  color: var(--font-two);
+}
+
+img {
+  width: var(--width-standard);
+  height: var(--height-standard);
+  margin: 1rem;
+  object-fit: cover;
+  border:1px solid #000000;
+}
+
+@media (max-width: 850px) {
+  :root {
+    --bg-color-main: #ff4304;
+    --bg-color-topics-title: #b0c704;
+    --bg-topics: #0561c2;
+    --font-one: #0c0c0c;
+    --font-two: #201e1e;
+  
+    --padding-header: 1.5rem 1rem;
+  
+    --width-standard: 600px;
+    --height-standard: 300px;
+  }
+}
+
+@media (max-width: 651px) {
+  :root {
+    --bg-color-main: #ff4304;
+    --bg-color-topics-title: #b0c704;
+    --bg-topics: #0561c2;
+    --font-one: #0c0c0c;
+    --font-two: #201e1e;
+  
+    --padding-header: 1.5rem 1rem;
+  
+    --width-standard: 100%;
+    --height-standard: auto;
+  }
+  img {
+    margin: 1rem 0px;
+  }
+}

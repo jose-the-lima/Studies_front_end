@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object fit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Object fit</h1>
+
+  <p>Essa propriedade vai cuidar de redimensionar a imagem para que ela seja vista de forma "interessante" com base no tamanho original dela e com o tamanho que você definir, ela vai ajudar a dimensionar a imagem de forma que ela se "adapte" ao cenário atual.</p>
+  <p>Para exemplo abaixo utilizaremos uma imagem 4k e vamos colocar ela no tamanho definido de 500x400:</p>
+
+  <h2>Fill(Padrão)</h2>
+  <img style="object-fit:fill;" src="./image.jpg" alt="Imagem de um campo aberto com uma fazenda">
+
+  <h2>Contain</h2>
+  <img style="object-fit:contain" src="./image.jpg" alt="Imagem de um campo aberto com uma fazenda">
+
+  <h2>Scale-down</h2>
+  <img style="object-fit:scale-down;" src="./image.jpg" alt="Imagem de um campo aberto com uma fazenda">
+
+  <h2>Cover</h2>
+  <img style="object-fit:cover;" src="./image.jpg" alt="Imagem de um campo aberto com uma fazenda">
+
+  <h2>None</h2>
+  <img style="object-fit:none;" src="./image.jpg" alt="Imagem de um campo aberto com uma fazenda">
+</body>
+</html>

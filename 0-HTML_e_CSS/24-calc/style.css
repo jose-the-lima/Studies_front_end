@@ -1,0 +1,13 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.header {
+  background-color: green;
+  height: 100px;
+}
+
+.section {
+  background-color: lightcoral;
+  height: calc(100vh - 100px);
+}

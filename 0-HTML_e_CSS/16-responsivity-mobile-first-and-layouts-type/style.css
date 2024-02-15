@@ -1,0 +1,25 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1 {
+  background-color: lightcyan;
+  padding: 10px;
+  text-align: center;
+}
+.section {
+  border-top: 4px solid purple;
+  padding: 10px;
+  background-color: lightgreen;
+  margin-bottom: 1.5rem;
+}
+
+p, li {
+  margin: .7rem 0px;
+}
+button {
+  padding: 10px;
+  cursor: pointer;
+}

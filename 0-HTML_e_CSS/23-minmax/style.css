@@ -1,0 +1,7 @@
+body {
+  text-align: center;
+}
+img {
+  width: max(50%, 250px);
+  /* max-width: 850px; */
+}
