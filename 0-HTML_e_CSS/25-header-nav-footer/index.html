@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header, nav e footer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header quando está no contexto "body", ou seja filho direto de body, ele já vem com a função ARIA "banner" implicita nele. a Função banner, vai simplesmente dizer aos leitores de tela que esse header, é o principal da página que contém, "logo do site", "menu de navegação", "barra de pesquisa" e esses afins. 
+  
+  Se o header for utilizado como aninhado de outros elementos como: section, article, footer.... ele vai simplesmente ser genérico \/-->
+  <header>
+    <p>Contruções D+</p>
+
+    <!-- Nav, armazena geralmente a área com os links de navegação principal da página -->
+    <nav>
+      <a href="#">Materiais</a>
+      <a href="#">Produção</a>
+      <a href="#">Promoções</a>
+      <a href="#">Sobre nós</a>
+    </nav>
+  </header>
+
+  <div class="main">
+    <div class="banner">
+      <img src="https://galvaminas.com.br/wp-content/uploads/2018/07/6-dicas-para-acertar-nas-construcoes-e-reformas.jpg" alt="">
+      <h2>Ha mais de 20 anos fazendo construções de outros mundo para você</h2>
+    </div>
+
+    <p class="paragraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minus sapiente labore illo et adipisci ullam, architecto aliquam exercitationem tenetur libero voluptates ut velit, tempore totam magnam eveniet dolores quo?</p>
+
+    <p class="paragraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minus sapiente labore illo et adipisci ullam, architecto aliquam exercitationem tenetur libero voluptates ut velit, tempore totam magnam eveniet dolores quo?</p>
+
+    <p class="paragraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minus sapiente labore illo et adipisci ullam, architecto aliquam exercitationem tenetur libero voluptates ut velit, tempore totam magnam eveniet dolores quo?</p>
+
+    <p class="paragraphs">Veja também:</p>
+    
+    <article class="posts">
+      <header>
+        <h3>Ultimos posts:</h3>
+      </header>
+      <div>
+        <article>
+          <header>
+            <h4>Construíndo uma casa com R$10000 reais</h4>
+            <time>17/02/2024</time>
+          </header>
+          <p>Basicamente eu construí a minha casa com exatos R$10000,00 reais, e para isso eu...</p>
+          <a href="#">Visitar artigo</a>
+        </article>
+        <article>
+          <header>
+            <h4>Melhores materiais para uma contrução robusta</h4>
+            <time>13/02/2024</time>
+          </header>
+          <p>Todo pedreiro já sabe que cimento, tijolo, areia e outros materiais assim são essenciais, mas existem alguns que...</p>
+          <a href="#">Visitar artigo</a>
+        </article>
+        <article>
+          <header>
+            <h4>Como fazer um cimento duradouro e resistente</h4>
+            <time>10/01/2024</time>
+          </header>
+          <p>Um cimento básico que supri a necessidade atual todo pedreiro sabe fazer, mas existe um cimento que resiste até...</p>
+          <a href="#">Visitar artigo</a>
+        </article>
+      </div>
+    </article>
+  </div>
+
+  <!-- Footer é o rodapé da página, geralmente é aqui que tem as informações de copyright, uma navegação mais distante da principal, digamos que uma "navegação secundária" -->
+  <footer>
+    <p>Copyright &copy; todos os direitos reservados 2024-forever</p>
+  </footer>
+</body>
+</html>

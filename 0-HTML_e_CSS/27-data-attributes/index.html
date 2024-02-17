@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data attributes</title>
+</head>
+<body>
+  <!-- Geralmente utilizado como um "atributo", mas para que serviria ele ? Apenas um atributo novo que você pode utilizar para aumentar ainda mais a sua gama de atributos ? Não exatamente.
+  
+  Você pode utilizar os data-atributes para armazenar valores temporários, valores que você pode pegar com muito mais facilidade, um tipo de "cache".
+
+  Se você não quer ficar buscando via API, vários dados, para depois filtrar cada um deles até acha um simples "idade: 29", você pode armazenar esses dados importntes em data-atributes, e ao invés de fazer inúmeras consultas ao banco de dados ou API, por conta de dados pequenos, na primeira requisição você pode pegar o necessário para se "ver" e depois pode armazenar no próprio elemento html daquele dado, os dados complementares, os caches que você geralmente vai pegando via api, por exemplo:
+
+  Aluno: João  data-age="22" data-matricula="123DF5" data-sex="masculino" data-serie="7 ano" data-height="1.87" data-weight="56.9" por exemplo, e ao invés de pegar esses dados toda vez em uma nova requisição de API você pode pegar simplesmente EX: elemento.getAttribute("data-age") -> Simples assim ^^. Hora de praticar;
+-->
+
+  <h1>Alunos</h1>
+
+  <ul class="list">
+    <li data-age="15" data-matricula="985" data-sex="masculino" data-serie="2° ano">João souza</li>
+    <li data-age="14" data-matricula="134" data-sex="masculino" data-serie="1° ano">Pedro jorge</li>
+    <li data-age="17" data-matricula="543" data-sex="feminino" data-serie="3° ano">Catarina silva</li>
+    <li data-age="13" data-matricula="123" data-sex="feminino" data-serie="1° ano">Joana maria</li>
+  </ul>
+
+  <p>Aluno: <span class="aluno-area"></span></p>
+
+  <button class="button">Matricula</button>
+  <button class="button">Idade</button>
+  <button class="button">Sexo</button>
+  <button class="button">Serie</button>
+
+  <p>Info: <span class="info-area"></span></p>
+
+
+  <script>
+    const aluno = document.querySelector(".aluno-area");
+    const info = document.querySelector(".info-area");
+    const list = document.querySelector(".list");
+    const button = document.querySelectorAll(".button");
+    let alunoSelected;
+
+    list.addEventListener("click", (event) => {
+      alunoSelected = event.target;
+      aluno.innerHTML = alunoSelected.innerHTML;
+    })
+
+    button.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        if(alunoSelected === undefined || alunoSelected === null) {
+          info.innerHTML = "Selecione um aluno primeiro";
+          return;
+        }
+        let response = event.target.innerHTML.toLowerCase();
+
+        switch(response) {
+          case "matricula":
+            info.innerHTML = alunoSelected.getAttribute("data-matricula");
+          break;
+          case "idade":
+            info.innerHTML = alunoSelected.getAttribute("data-age");
+          break;
+          case "sexo":
+            info.innerHTML = alunoSelected.getAttribute("data-sex");
+          break;
+          case "serie":
+            info.innerHTML = alunoSelected.getAttribute("data-serie");
+          break;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
