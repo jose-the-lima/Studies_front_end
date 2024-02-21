@@ -1,0 +1,67 @@
+/* Caixa de música "MP3" */
+.caixinha {
+  width: 250px;
+  height: 500px;
+  background-color: gray;
+  border: 4px double #000000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Buttons área */
+.buttons {
+  border: 1px solid #000000;
+  padding: .3rem;
+  display: flex;
+  gap: 1rem;
+}
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button img {
+  width: 30px;
+  height: 30px;
+}
+
+.button:active {
+  background-color: #222222;
+}
+
+.invisible {
+  display: none;
+}
+
+.active {
+  background-color: #ff0000;
+}
+
+
+
+/* Duração da música */
+.duration-area .duration-time {
+  text-align: center;
+  margin: .5rem 0px;
+}
+
+.volume {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  padding: 5px 0px;
+}
+.volume img {
+  width: 35px;
+  height: 35px;
+}

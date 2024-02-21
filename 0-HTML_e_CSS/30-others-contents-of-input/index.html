@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Biblioteca CSS, que funciona muito bem, e até melhor que muitos Resets CSS de hoje em dia, vai normalizar e padronizar melhor o seu CSS inicial -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- placeholder: Palavra dica que fica abaixo do input, dizendo o que será informado naquele campo -->
+  <!-- minlength e maxlength: Utilizado para definir o minimo de caracteres aceitados no campo e o máximo respectivamente -->
+  <!-- autofocus: Atributo boleano que vai dar o foco ao campo que o utiliza. OBS: limitado 1 por página -->
+  <!-- autocomplete: Vai dar dicas do que escrever no campo, com base no que você já escreveu antes -->
+  <form method="POST">
+    <section>
+      <label class="user">
+        Usuário<br>
+        <input type="text" name="user" placeholder="Usuário" minlength="4" autofocus required autocomplete="on">
+      </label>
+  
+      <label class="password">
+        Senha<br>
+        <input type="password" name="password" placeholder="Senha" minlength="4" required>
+      </label>
+  
+      <div class="button">
+        <button>Entrar</button>
+      </div>
+    </section>
+  </form>
+</body>
+</html>

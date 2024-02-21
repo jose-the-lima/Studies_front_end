@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="caixinha">
+    <audio>
+      <source src="audios/audio.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="duration-area">
+      <input class="duration" type="range" min="0" max="">
+      <div class="duration-time"></div>
+    </div>
+
+    <div class="buttons">
+      <div class="button play">
+        <img src="images/play.png" alt="Botão para reproduzir o audio">
+      </div>
+
+      <div class="button pause invisible">
+        <img src="images/pause.webp" alt="Botão para pausar o audio">
+      </div>
+
+      <div class="button stop">
+        <img src="images/stop-icon.png" alt="Botão para parar o audio">
+      </div>
+
+      <div class="button muted">
+        <img src="images/muted.png" alt="Botão para deixar o audio mudo">
+      </div>
+    </div>
+
+    <div class="volume">
+      <img src="images/sound.png" alt="Imagem do volume do audio">
+      <input class="volume-choose" type="range" min="0" max="100" value="100">
+    </div>
+  </div>
+  <script>
+    const audio = document.querySelector("audio");
+    let durationRange = document.querySelector(".duration");
+    let durationTime = document.querySelector(".duration-time");
+    let playButton = document.querySelector(".play");
+    let pauseButton = document.querySelector(".pause");
+    let stopButton = document.querySelector(".stop");
+    let muteButton = document.querySelector(".muted");
+    let volumeChooser = document.querySelector(".volume-choose");
+    let lastValueOfVolume;
+    let secondsActual = 0;
+    let wasEnd = false;
+
+    // Escutador de evento de quando o audio estiver carregado;
+    audio.addEventListener("canplay", () => {
+      if(!wasEnd) {
+        durationRange.setAttribute("max", audio.duration);
+        durationRange.value = 0;
+        durationTime.innerHTML = "0:00";
+
+        wasEnd = true;
+      }
+    })
+
+    // Escutador do evento de mudança de tempo na música em si, se ela mudar o tempo, os segundos abaixo também mudarão
+    audio.addEventListener("timeupdate", () => {
+      const time = Number(audio.currentTime.toFixed(0));
+      durationRange.value = time;
+      durationTime.innerHTML = changeTime(Number(Number(durationRange.value).toFixed(0)));
+    })
+
+    // Isso daqui vai ser para definir o tempo de "execução da música", quando o usuário mexer diretamente, ele vai alterar diretamente o current time do audio em si.
+    durationRange.addEventListener("input", () => {
+      audio.currentTime = durationRange.value;
+    })
+
+    function changeTime(time) {
+      if(time < 60) {
+        return `0:${minusThanTen(time)}`;
+      } else if(time >= 60) {
+        const total = timeRest(time);
+        let minutes = total[0];
+        let rest = minusThanTen(total[1]);
+        return `${minutes}:${rest}`;
+      }
+    }
+
+    function minusThanTen(number) {
+      return number < 10 ? `0${number}` : number;
+    }
+
+    function timeRest(number) {
+      let minutes = 0;
+      while(number >= 60) {
+        minutes++;
+        number -= 60;
+      }
+
+      return [minutes, number];
+    }
+
+
+
+    // Funções dos botões
+
+    // Function play
+    playButton.addEventListener("click", () => {
+      audio.play();
+      playButton.classList.add("invisible")
+      pauseButton.classList.remove("invisible");
+    });
+
+    // Function pause
+    pauseButton.addEventListener("click", () => {
+      audio.pause();
+      pauseButton.classList.add("invisible")
+      playButton.classList.remove("invisible");
+    });
+
+    // Function stop
+    stopButton.addEventListener("click", () => {
+      audio.pause();
+      audio.currentTime = 0;
+      playButton.classList.remove("invisible");
+      pauseButton.classList.add("invisible")
+    });
+
+    // Function muted
+    let muted = false;
+    muteButton.addEventListener("click", () => {
+      if(!muted) {
+        audio.volume = 0.0;
+        muteButton.classList.add("active");
+        muted = !muted;
+        lastValueOfVolume = volumeChooser.value;
+        volumeChooser.value = 0;
+      } else {
+        audio.volume = 1.0;
+        muteButton.classList.remove("active");
+        muted = !muted;
+        volumeChooser.value = lastValueOfVolume;
+      }
+    })
+
+    // Function volume
+    audio.volume = 1.0;
+
+    volumeChooser.addEventListener("input", () => {
+      if(muted) {
+        muted = false;
+        muteButton.classList.remove("active");
+        lastValueOfVolume = volumeChooser.value;
+      }
+      audio.volume = volumeChooser.value / 100;
+    });
+  </script>
+</body>
+</html>

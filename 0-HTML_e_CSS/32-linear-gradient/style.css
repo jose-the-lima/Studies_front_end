@@ -1,0 +1,61 @@
+:root {
+  --width: 150px;
+  --height: 120px;
+  --gap: 10px;
+  --scale: 1.5;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: arial;
+}
+
+.galery-gradient {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: calc(calc(var(--width) * 3) + calc(var(--gap) * 2));
+  aspect-ratio: 1;
+  gap: var(--gap);
+}
+
+.galery-gradient .gradient-item {
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  border: 1px solid #000000;
+  transition: .5s all ease;
+}
+.galery-gradient .gradient-item:hover {
+  width: calc(var(--width) * var(--scale));
+  height: calc(var(--height) * var(--scale));
+}
+
+
+.item-1 {
+  background-image: linear-gradient(blue, white);
+}
+.item-2 {
+  background-image: linear-gradient(red, green);
+}
+.item-3 {
+  background-image: linear-gradient(lightcoral, darkgreen);
+}
+.item-4 {
+  background-image: linear-gradient(purple, violet);
+}
+.item-5 {
+  background-image: linear-gradient(cyan, darkblue);
+}
+.item-6 {
+  background-image: linear-gradient(gold, orangered);
+}
+.item-7 {
+  background-image: linear-gradient(gray, black);
+}
+.item-8 {
+  background-image: linear-gradient(purple, red);
+}
+.item-9 {
+  background-image: linear-gradient(#456452, #994488);
+}

@@ -1,0 +1,72 @@
+:root {
+  --primary-color: #975197;
+  --secondary-color: #333333;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+body {
+  background-color: var(--secondary-color);
+  /* background-image: linear-gradient(180deg, #000000, #000000, #333333); */
+}
+main {
+  display: flex;
+}
+
+.video-area {
+  flex: 2;
+}
+.video-area .video {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 1.778;
+  display: block;
+  margin: 3rem auto 0px;
+  background-color: var(--secondary-color);
+}
+.video-title {
+  font-size: 1.7rem;
+  padding: 1rem 0px 0px 0px;
+  color: var(--primary-color);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.videos-area {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
+
+.videos-area article {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  transition: .3s all ease;
+  color: var(--secondary-color);
+  border-radius: 5px;
+}
+.videos-area article h3 {
+  font-size: 18px;
+  padding: 5px;
+}
+.videos-area article video {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.videos-area article:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  color: var(--primary-color);
+}

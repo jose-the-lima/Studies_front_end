@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="video-area">
+      <video class="video" controls>
+        <source src="videos/video-espaco.mp4" type="video/mp4" data-content="video sobre o espaço">
+      </video>
+      <h2 class="video-title"></h2>
+    </section>
+    <section class="videos-area">
+      <article class="video-side">
+        <h3 class="video-side-title"></h3>
+        <video><source src="videos/video-animacao.mp4" data-content="Animação de 15 segundos"></video>
+      </article>
+      
+      <article class="video-side">
+        <h3 class="video-side-title"></h3>
+        <video><source src="videos/video-engracado.mp4" data-content="Video engraçado"></video>
+      </article>
+      <article class="video-side">
+        <h3 class="video-side-title"></h3>
+        <video><source src="videos/video-motivacao.mp4" data-content="Video motivacional 1"></video>
+      </article>
+      <article class="video-side">
+        <h3 class="video-side-title"></h3>
+        <video><source src="videos/video-motivacional-2.mp4" data-content="Video motivacional 2"></video>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const videoMain = document.querySelector(".video-area");
+    const videoMainTitle = document.querySelector(".video-title");
+
+    videoMainTitle.innerHTML = videoMain.querySelector(".video source").getAttribute("data-content");
+
+    putNamesOfVideos();
+
+    function putNamesOfVideos() {
+      const videos = document.querySelectorAll(".video-side");
+
+      videos.forEach((video) => {
+        const title = video.children[1].querySelector("source").getAttribute("data-content");
+        video.children[0].innerHTML = title;
+      });
+    }
+
+    const videos = document.querySelectorAll(".video-side");
+    videos.forEach(video => {
+      video.addEventListener("click", (event) => {
+        let child = event.target.parentElement.children[1];
+        if(child.hasAttribute("class")) {
+          child = child.children[1];
+        }
+
+
+        changeVideo(videoMain, child);
+      })
+    });
+
+    function changeVideo(areaVideo, newVideo) {
+      let actualVideo = areaVideo.children[0];
+      let oldFather = newVideo.parentElement;
+      
+      console.log(oldFather);
+
+      newVideo.setAttribute("class", "video");
+      newVideo.setAttribute("controls", "");
+      newVideo.pause();
+
+      actualVideo.removeAttribute("class");
+      actualVideo.removeAttribute("controls");
+      actualVideo.pause();
+      actualVideo.currentTime = 0;
+
+      areaVideo.removeChild(actualVideo);
+      areaVideo.insertBefore(newVideo, areaVideo.querySelector(".video-title"));
+
+      // oldFather.removeChild(newVideo);
+      oldFather.appendChild(actualVideo);
+
+      refreshLegend();
+
+      putNamesOfVideos();
+    }
+
+    function refreshLegend() {
+      const legend = videoMain.querySelector(".video source").getAttribute("data-content");
+      videoMainTitle.innerHTML = legend;
+
+
+    }
+  </script>
+</body>
+</html>
