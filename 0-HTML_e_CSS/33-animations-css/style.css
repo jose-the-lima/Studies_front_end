@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+@keyframes pulsando {
+  0% {border-radius: 0%}
+  50% {border-radius: 50%;}
+  100% {border-radius: 0%}
+}
+
+@keyframes move {
+  0% {border: 5px solid red;}
+  25% {border: 5px solid blue;}
+  50% {border: 5px solid green;}
+  75% {border: 5px solid purple;}
+  100% {border: 5px solid red;}
+}
+
+@keyframes movement {
+  0% {top: -5px; left: -5px; width: 10px; height: 10px;}
+  13% {top: -5px; left: -5px;width: 100%; height: 10px}
+  26% {top: -5px; left: 190px; width: 10px; height: 10px;}
+  39% {top: -5px; left: 190px; width: 10px; height: 100%;}
+  52% {top: 190px; left: 190px; width: 10px; height: 10px;}
+  65% {top: 190px; left: -5px; width: 100%; height: 10px;}
+  78% {top: 190px; left: -5px; width: 10px; height: 10px;}
+  91% {top: -5px; left: -5px; width: 10px; height: 100%;}
+  100% {top: -5px; left: -5px; width: 10px; height: 10px;}
+}
+
+
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: orangered;
+  position: absolute;
+  border: 5px solid #ff0000;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  /* animation-name: move; */
+  /* animation-duration: 4s; */
+}
+.point {
+  width: 10px;
+  height: 10px;
+  background: cyan;
+  box-shadow: 1px 2px 3px #ffffff;
+  position: absolute;
+  animation-name: movement;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+}
+
+.box:hover {
+  animation-name: pulsando;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

@@ -1,0 +1,24 @@
+* {
+  font-family: arial;
+}
+.image-product {
+  width: 500px;
+  border: 1px solid #000000;
+  display: block;
+  margin: 0 auto;
+}
+
+article {
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid #333333;
+  padding: 1rem;
+}
+
+dd {
+  background-color: #000000;
+  padding: 5px;
+  display: inline-block;
+  color: #ffffff;
+  margin: 10px 0px;
+}
