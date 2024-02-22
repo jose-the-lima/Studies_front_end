@@ -1,0 +1,14 @@
+figure {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #999999;
+}
+figure img {
+  width: 500px;
+}
+
+figure figcaption {
+  background-color: #444444;
+  color: #ffffff;
+  padding: 5px;
+}
