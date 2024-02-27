@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alignments</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Alinhamentos</h1>
+
+  <article>
+    <h2>Alinhamentos e explicação</h2>
+
+    <article>
+      <h3>Propriedades:</h3>
+      <ul>
+        <li>justify-content</li>
+        <li>align-items</li>
+        <li>align-self</li>
+        <li>align-content</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Valores:</h3>
+      <ul>
+        <li>flex-start(justify-content & align-items & align-self & align-content)</li>
+        <li>flex-end(justify-content & align-items & align-self & align-content)</li>
+        <li>center(justify-content & align-items & align-self & align-content)</li>
+        <li>space-around(justify-content & align-content)</li>
+        <li>space-between(justify-content & align-content)</li>
+        <li>space-evenly(justify-content & align-content)</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Explição</h3>
+
+      <p>Justify-content geralmente vai alinhar o conteúdo na orientação principal em que ele se encontrar, ou seja, se o "flex-direction" for "row" ele vai alinhar a linha, se for "column" ele vai alinhar a coluna</p>
+
+      <p>Align-itens sempre vai pelo outro lado, ele é sempre o contrário, se o "flex-direction" é "row" ele alinha a "column" e vice-versa</p>
+
+      <p>Align-self vai alinhar o elemento basicamente, essa propriedade é para ser utilizada em um elemento "flex-item" do "flex-container" para que ele altere de forma singular</p>
+
+      <p>Quando utilizamos o flex-wrap e ele começa a "quebrar" as linhas e fazer um novo "flex-container" abaixo, ele vai ficando meio desorganizado e isso vai fazendo com que fique tudo bem estranho.... E é para isso que o "align-content" serve, para alinhar elementos de um mesmo "flex-container" que estão separados por um "wrap"</p>
+    </article>
+  </article>
+</body>
+</html>

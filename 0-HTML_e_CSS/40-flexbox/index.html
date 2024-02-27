@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex-box</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Flexbox</h1>
+
+    <p>Com o flexbox você pode fazer caixas flexiveis que fazem com que os elementos dentro dela se adaptem ao seu tamanho original, e sem quebrar caso ocupem um tamanho maior que o limite</p>
+  
+    <p>Veja como exemplo abaixo caixas sem e com o flexbox: </p>
+    <article>
+      <h2>Sem flexbox e ambas as caixas com 800px de largura e 200px de altura</h2>
+    
+      <div class="box-1">
+        <div></div>
+        <div></div>
+      </div>
+    </article>
+  
+    <article>
+      <h2>Com flexbox e com as mesmas propriedades acima:</h2>
+    
+      <div class="box-2">
+        <div></div>
+        <div></div>
+      </div>
+    
+      <p>Mesmo com ambas tendo 800px de largura, como estão em um <em>box flexível</em> então elas vão se adaptar ao tamanho máximo dessa caixa, e vão respeitar até onde puderem para continuarem flexíveis</p>
+    </article>
+  
+    <article>
+      <h2>Com flex-box podemos definir a direção da caixa</h2>
+
+      <article>
+        <h3>Row</h3>
+
+        <div class="div-3">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+        </div>
+      </article>
+
+      <article>
+        <h3>Column</h3>
+
+        <div class="div-4">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+        </div>
+      </article>
+    </article>
+
+
+    <section>
+      <h2>Mini-exemplo de uso</h2>
+
+      <article>
+        <h3>Melhores campeões da Pre-season 2024</h3>
+        <div class="div-5">
+          <div class="champ">
+            <p class="name">Smolder</p>
+            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltc7522aa067fba431/659cbccc0543c550af8f3e20/Base_Smolder_-_Final_opt.jpg" alt="">
+            <p class="route">Principal(ais) rotas</p>
+            <ul>
+              <li>Atirador</li>
+              <li>Meio</li>
+            </ul>
+          </div>
+
+          <div class="champ">
+            <p class="name">Akali</p>
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg" alt="">
+            <p class="route">Principal(ais) rotas</p>
+            <ul>
+              <li>Meio</li>
+              <li>Topo</li>
+            </ul>
+          </div>
+
+          <div class="champ">
+            <p class="name">Azir</p>
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg" alt="">
+            <p class="route">Principal(ais) rotas</p>
+            <ul>
+              <li>Meio</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
